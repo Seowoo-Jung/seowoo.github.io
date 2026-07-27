@@ -3,7 +3,7 @@ title: 'BayesSIM: An R Package for Bayesian Single-Index Model via nimble'
 collection: publications
 category: workingPaper
 permalink: /publication/BayesSIM-working
-date: 2026
+citation: 'Jung, S., Lee, E. K., “BayesSIM: An R Package for Bayesian Single-Index Model via nimble”.'
 ---
 
 **Abstract**

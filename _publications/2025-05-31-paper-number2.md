@@ -7,7 +7,7 @@ date: 2025-05-31
 venue: 'Journal of Health Informatics and Statistics'
 paperurl: '/files/number2-2025.pdf'
 bibtexurl: '/files/Journal of Health Informatics and Statistics_50_181.bib'
-citation: ' Jung, S., Kim, M., Lee, J., Min, J., Kim, H., Lee, E. K., Ha, E., “Analysis of the Association of Dietary Patterns With Depression in Pregnant Women Using Big Data – Mediating Effect of Blood Heavy Metal Concentration” (2025), Journal of Health Informatics and Statistics, 50(2):181–191.'
+citation: 'Jung, S., Kim, M., Lee, J., Min, J., Kim, H., Lee, E. K., Ha, E., “Analysis of the Association of Dietary Patterns With Depression in Pregnant Women Using Big Data – Mediating Effect of Blood Heavy Metal Concentration” (2025), Journal of Health Informatics and Statistics, 50(2):181–191.'
 ---
 
 **Abstract**
