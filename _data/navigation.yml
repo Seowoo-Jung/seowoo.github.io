@@ -10,8 +10,8 @@
 main:
 
   - title: "CV"
-  #  url: /cv/
-    url: /files/Seowoo_Jung_CV_ver2.pdf
+    url: /cv/
+  #  url: /files/Seowoo_Jung_CV_ver2.pdf
 
   - title: "Publications"
     url: /publications/
