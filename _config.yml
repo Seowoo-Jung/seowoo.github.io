@@ -26,7 +26,7 @@ author:
   avatar           : "seowoo_pic.jpg"
   name             : "Seowoo Jung" # Update this with your name, this is the default if not overridden by a page
   pronouns         : "she/her" # Update this with your pronouns, this is the default if not overridden by a page
-  bio              : "Ph.D student in Ewha Womans University"
+  bio              : "Ph.D candidate in Ewha Womans University"
   location         : "Seoul, South Korea"
   employer         : "Ewha Womans University"
   uri              : # URL
@@ -84,6 +84,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
+  workingPaper:
+    title: 'Working Papers'   
   manuscripts:
     title: 'Journal Articles'    
   Packages:

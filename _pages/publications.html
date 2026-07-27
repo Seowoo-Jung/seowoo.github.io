@@ -6,31 +6,132 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    You can also find my articles on
+    <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+  </div>
 {% endif %}
 
-{% include base_path %}
+<style>
+  .publication-list {
+    margin-top: 0.8em;
+    margin-bottom: 2em;
+  }
 
-<!-- New style rendering if publication categories are defined -->
+  .publication-list li {
+    margin-bottom: 1em;
+    padding-left: 0.2em;
+    line-height: 1.55;
+  }
+
+  .publication-links {
+    margin-top: 0.15em;
+  }
+
+  .publication-links a {
+    margin-right: 0.2em;
+  }
+</style>
+
+<!-- Render publications by category -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+
+  {% for category in site.publication_category %}
+
+    {% assign category_posts = site.publications
+      | where: "category", category[0]
+      | sort: "date"
+      | reverse
+    %}
+
+    {% if category_posts.size > 0 %}
+
+      <h2>{{ category[1].title }}</h2>
+
+      <ol reversed start="{{ category_posts.size }}" class="publication-list">
+
+        {% for post in category_posts %}
+          <li>
+
+            {{ post.citation }}
+
+            <div class="publication-links">
+
+              {% if post.paperurl %}
+                <a href="{{ post.paperurl | relative_url }}"
+                   target="_blank"
+                   rel="noopener">
+                  [paper]
+                </a>
+              {% endif %}
+
+              {% if post.bibtexurl %}
+                <a href="{{ post.bibtexurl | relative_url }}"
+                   target="_blank"
+                   rel="noopener">
+                  [BibTeX]
+                </a>
+              {% endif %}
+
+              {% if post.packageurl %}
+                <a href="{{ post.packageurl }}"
+                   target="_blank"
+                   rel="noopener">
+                  [package]
+                </a>
+              {% endif %}
+
+              {% if post.githuburl %}
+                <a href="{{ post.githuburl }}"
+                   target="_blank"
+                   rel="noopener">
+                  [GitHub]
+                </a>
+              {% endif %}
+
+              <a href="{{ post.url | relative_url }}">
+                [more info]
+              </a>
+
+            </div>
+
+          </li>
+        {% endfor %}
+
+      </ol>
+
+    {% endif %}
+
   {% endfor %}
+
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+
+  <ol reversed start="{{ site.publications.size }}" class="publication-list">
+
+    {% assign all_publications = site.publications
+      | sort: "date"
+      | reverse
+    %}
+
+    {% for post in all_publications %}
+      <li>
+
+        {{ post.citation }}
+
+        <div class="publication-links">
+
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl | relative_url }}">[paper]</a>
+          {% endif %}
+
+          <a href="{{ post.url | relative_url }}">[more info]</a>
+
+        </div>
+
+      </li>
+    {% endfor %}
+
+  </ol>
+
 {% endif %}
-
-
 
