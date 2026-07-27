@@ -88,8 +88,8 @@ publication_category:
     title: 'Working Papers'   
   manuscripts:
     title: 'Journal Articles'    
-  Packages:
-    title: 'R package'
+  packages:
+    title: 'R packages'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

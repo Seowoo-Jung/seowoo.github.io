@@ -4,14 +4,6 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">
-    You can also find my articles on
-    <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
-  </div>
-{% endif %}
-
 <style>
   .publication-list {
     margin-top: 0.8em;
@@ -48,7 +40,7 @@ author_profile: true
 
       <h2>{{ category[1].title }}</h2>
 
-      <ol reversed start="{{ category_posts.size }}" class="publication-list">
+      <ol start="{{ category_posts.size }}" class="publication-list">
 
         {% for post in category_posts %}
           <li>
@@ -106,7 +98,7 @@ author_profile: true
 
 {% else %}
 
-  <ol reversed start="{{ site.publications.size }}" class="publication-list">
+  <ol start="{{ site.publications.size }}" class="publication-list">
 
     {% assign all_publications = site.publications
       | sort: "date"

@@ -1,7 +1,7 @@
 ---
 title: "BayesSIM: Integrated Interface of Bayesian Single Index Models using 'nimble'"
 collection: publications
-category: Packages
+category: packages
 permalink: /publication/BayesSIM-pkg
 date: 2025-10-30
 venue: 'CRAN'
