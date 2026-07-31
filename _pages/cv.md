@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-[Download CV]({{ '/files/Seowoo_Jung_CV_ver2.pdf' | relative_url }})
+[Download CV]({{ '/files/Seowoo_Jung_CV_ver3.pdf' | relative_url }})
